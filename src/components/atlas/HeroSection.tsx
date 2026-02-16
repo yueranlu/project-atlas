@@ -1,22 +1,18 @@
 import { motion } from "framer-motion";
-import heroOrbs from "@/assets/hero-orbs.png";
+import GlobeBackground from "./GlobeBackground";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background orbs image */}
+      {/* Globe background */}
       <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.7 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.8 }}
+        transition={{ duration: 2, ease: "easeOut" }}
         className="absolute inset-0 z-0"
       >
-        <img
-          src={heroOrbs}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+        <GlobeBackground />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background pointer-events-none" />
       </motion.div>
 
       {/* Content */}
