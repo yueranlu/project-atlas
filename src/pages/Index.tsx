@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/atlas/Navbar";
+import HeroSection from "@/components/atlas/HeroSection";
+import AboutSection from "@/components/atlas/AboutSection";
+import SpeakersSection from "@/components/atlas/SpeakersSection";
+import MarqueeSection from "@/components/atlas/MarqueeSection";
+import WhatIsSection from "@/components/atlas/WhatIsSection";
+import WhyAttendSection from "@/components/atlas/WhyAttendSection";
+import PartnersSection from "@/components/atlas/PartnersSection";
+import FooterSection from "@/components/atlas/FooterSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <SpeakersSection />
+      <MarqueeSection />
+      <WhatIsSection />
+      <WhyAttendSection />
+      <MarqueeSection />
+      <PartnersSection />
+      <FooterSection />
     </div>
   );
 };
