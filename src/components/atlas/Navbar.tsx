@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const navItems = ["About", "Speakers", "Gallery", "Partners"];
+const navItems = ["About", "Schedule", "Partners", "Contact"];
 
 const Navbar = () => {
   return (
@@ -24,19 +24,19 @@ const Navbar = () => {
         </div>
 
         <h1 className="font-serif text-xl font-bold tracking-wider text-foreground">
-          ATLAS<span className="text-primary">.</span>EVENT
+          PROJECT<span className="text-primary">.</span>ATLAS
         </h1>
 
         <div className="flex items-center gap-6">
           <div className="hidden md:flex flex-col items-end">
-            <span className="font-mono text-xs text-spaced text-muted-foreground">COMING SOON</span>
-            <span className="font-mono text-xs text-muted-foreground">LOCATION TBA</span>
+            <span className="font-mono text-xs text-spaced text-muted-foreground">MAY 24–30, 2026</span>
+            <span className="font-mono text-xs text-muted-foreground">MONTREAL → TORONTO</span>
           </div>
           <a
-            href="#tickets"
+            href="#apply"
             className="font-mono text-xs px-5 py-2.5 rounded-full border border-primary text-primary-foreground bg-primary hover:bg-primary/80 transition-colors text-spaced"
           >
-            Get Tickets
+            Apply Now
           </a>
         </div>
       </div>
