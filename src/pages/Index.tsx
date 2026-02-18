@@ -1,8 +1,9 @@
 import Navbar from "@/components/atlas/Navbar";
 import HeroSection from "@/components/atlas/HeroSection";
 import AboutSection from "@/components/atlas/AboutSection";
+import StatsBar from "@/components/atlas/StatsBar";
 import SpeakersSection from "@/components/atlas/SpeakersSection";
-import MarqueeSection from "@/components/atlas/MarqueeSection";
+import VelocityMarquee from "@/components/atlas/VelocityMarquee";
 import WhatIsSection from "@/components/atlas/WhatIsSection";
 import WhyAttendSection from "@/components/atlas/WhyAttendSection";
 import PartnersSection from "@/components/atlas/PartnersSection";
@@ -14,11 +15,12 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <StatsBar />
       <SpeakersSection />
-      <MarqueeSection />
+      <VelocityMarquee />
       <WhatIsSection />
       <WhyAttendSection />
-      <MarqueeSection />
+      <VelocityMarquee />
       <PartnersSection />
       <FooterSection />
     </div>

@@ -1,5 +1,5 @@
 const MarqueeSection = () => {
-  const text = "Bringing together makers, creators and visionaries \u00A0\u00A0•\u00A0\u00A0";
+  const text = "Montreal builds different \u00A0\u00A0\u2022\u00A0\u00A0 It's time the rest of the world knows it \u00A0\u00A0\u2022\u00A0\u00A0";
   const repeated = text.repeat(6);
 
   return (
