@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { IconCloud } from "@/components/ui/icon-cloud";
+import PartnerModal from "./PartnerModal";
 
 // Using Simple Icons CDN (verified working with CORS)
 const partnerLogos = [
@@ -49,6 +51,7 @@ const partnerNames = [
 ];
 
 const PartnersSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="partners" className="py-32 px-6">
       <div className="max-w-[1400px] mx-auto">
@@ -98,12 +101,12 @@ const PartnersSection = () => {
               transition={{ delay: 0.4 }}
               className="mt-10"
             >
-              <a
-                href="#contact"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="font-mono text-xs px-6 py-3 rounded-full border-glow text-foreground hover:bg-secondary transition-colors text-spaced inline-block"
-              >
+            >
                 Become a Partner
-              </a>
+              </button>
             </motion.div>
           </div>
 
@@ -118,6 +121,7 @@ const PartnersSection = () => {
           </motion.div>
         </div>
       </div>
+      <PartnerModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
