@@ -102,7 +102,7 @@ const AboutSection = () => {
             rel="noopener noreferrer"
             className="inline-block px-12 py-5 rounded-full bg-primary text-primary-foreground font-mono text-sm text-spaced hover:bg-primary/80 transition-colors glow-purple"
           >
-            Sign Up Now
+            Join Us
           </a>
           <p className="font-mono text-xs text-muted-foreground mt-4">
             Limited to 100 spots

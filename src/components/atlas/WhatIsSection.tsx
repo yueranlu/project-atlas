@@ -22,14 +22,14 @@ const WhatIsSection = () => {
           <p className="font-mono text-sm leading-loose text-muted-foreground">
             A student-run initiative advancing access to Venture Capital through
             networking events, panel discussions, and an exclusive analyst program.
-            75+ team members. Thousands of attendees.
+            30 team members. Thousands of attendees.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
             {[
               { label: "McGill Ventures Fund", desc: "Investing in McGill startups" },
-              { label: "Health Tech Lab", desc: "Innovation in healthcare" },
-              { label: "Venture Advisory", desc: "Guidance for founders" },
+              { label: "Health Tech Innovation Lab (HTIL)", desc: "Stem-focused research for stem-related startups" },
+              { label: "Venture Advisory", desc: "Pro bono advisory" },
               { label: "Analyst Program", desc: "VC mentorship from Canada's best" },
             ].map((item, i) => (
               <motion.div

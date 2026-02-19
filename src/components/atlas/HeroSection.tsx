@@ -58,7 +58,7 @@ const HeroSection = () => {
           <div className="flex items-center gap-4 mt-3">
             <div className="w-12 h-[1px] bg-primary/50" />
             <p className="font-mono text-xs text-muted-foreground">
-              100–150+ students · 300+ events · 5 days
+              100+ students · 300+ events · 5 days
             </p>
           </div>
         </motion.div>

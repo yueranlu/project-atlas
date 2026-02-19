@@ -16,10 +16,10 @@ const Index = () => {
       <StatsBar />
       <SpeakersSection />
       <VelocityMarquee />
-      <WhatIsSection />
       <WhyAttendSection />
       <VelocityMarquee />
       <PartnersSection />
+      <WhatIsSection />
       <FooterSection />
     </div>
   );
