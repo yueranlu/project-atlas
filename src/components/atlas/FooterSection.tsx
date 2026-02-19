@@ -17,20 +17,12 @@ const FooterSection = () => {
             <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
               Contact
             </h3>
-            <div className="space-y-3">
-              <div>
-                <p className="font-mono text-xs text-foreground">Clara Caden</p>
-                <p className="font-mono text-xs text-muted-foreground">Project Lead</p>
-              </div>
-              <div>
-                <p className="font-mono text-xs text-foreground">Naureen Ahmed</p>
-                <p className="font-mono text-xs text-muted-foreground">Project Lead</p>
-              </div>
-              <div>
-                <p className="font-mono text-xs text-foreground">Donald Jackson McIntosh</p>
-                <p className="font-mono text-xs text-muted-foreground">Project Lead</p>
-              </div>
-            </div>
+            <p className="font-mono text-xs text-muted-foreground">
+              Get in touch with the Project Atlas team
+            </p>
+            <a href="mailto:atlas@mcgillventures.ca" className="font-mono text-xs text-primary hover:text-primary/80 transition-colors mt-2 inline-block">
+              atlas@mcgillventures.ca
+            </a>
           </div>
 
           <div>
