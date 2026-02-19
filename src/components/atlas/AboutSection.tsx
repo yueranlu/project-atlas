@@ -57,14 +57,14 @@ const AboutSection = () => {
                   <img
                     src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&q=80"
                     alt="Students collaborating"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-32 md:h-48 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
                     src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&q=80"
                     alt="Toronto skyline at night"
-                    className="w-full h-64 object-cover"
+                    className="w-full h-40 md:h-64 object-cover"
                   />
                 </div>
               </div>
@@ -73,14 +73,14 @@ const AboutSection = () => {
                   <img
                     src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&q=80"
                     alt="Conference presentation"
-                    className="w-full h-64 object-cover"
+                    className="w-full h-40 md:h-64 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
                     src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80"
                     alt="Toronto CN Tower"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-32 md:h-48 object-cover"
                   />
                 </div>
               </div>

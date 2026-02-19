@@ -21,7 +21,7 @@ const StatsBar = () => {
             transition={{ duration: 0.6, delay: i * 0.1 }}
             className="text-center"
           >
-            <span className="font-serif text-5xl md:text-7xl font-bold text-foreground">
+            <span className="font-serif text-4xl md:text-7xl font-bold text-foreground">
               <NumberTicker value={stat.value} delay={0.3 + i * 0.15} />
               {stat.suffix}
             </span>

@@ -58,12 +58,12 @@ const WhatIsSection = () => {
             <img
               src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
               alt="Tech conference networking event"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[250px] md:h-[400px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
             <div className="absolute bottom-6 left-6">
               <span className="font-mono text-xs text-spaced text-primary">Events like</span>
-              <p className="font-serif text-xl font-bold text-foreground">Startupfest · North Star · Scarlet Pitch</p>
+              <p className="font-serif text-base md:text-xl font-bold text-foreground">Startupfest · North Star · Scarlet Pitch</p>
             </div>
           </div>
         </motion.div>
