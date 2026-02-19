@@ -53,7 +53,7 @@ const HeroSection = () => {
           className="mt-12 flex flex-col items-start text-left max-w-lg"
         >
           <p className="font-mono text-xs text-spaced text-muted-foreground">
-            Connecting Montreal's Builders to the World
+            Connecting Canada's Young Builders to the World
           </p>
           <div className="flex items-center gap-4 mt-3">
             <div className="w-12 h-[1px] bg-primary/50" />

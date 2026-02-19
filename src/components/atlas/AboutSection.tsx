@@ -17,7 +17,7 @@ const AboutSection = () => {
               <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 The best{" "}
                 <span className="text-gradient-purple">builders</span> in
-                Montreal, moving{" "}
+                Canada, moving{" "}
                 <span className="text-gradient-purple">together</span>.
               </h2>
             </motion.div>
@@ -105,7 +105,7 @@ const AboutSection = () => {
             Sign Up Now
           </a>
           <p className="font-mono text-xs text-muted-foreground mt-4">
-            Free entry · Limited to 150 spots
+            Limited to 150 spots
           </p>
         </motion.div>
       </div>

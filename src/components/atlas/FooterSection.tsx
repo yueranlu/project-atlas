@@ -8,8 +8,8 @@ const FooterSection = () => {
               PROJECT<span className="text-primary">.</span>ATLAS
             </h2>
             <p className="font-mono text-xs text-muted-foreground leading-relaxed">
-              A McGill Ventures initiative connecting Montreal's most capable
-              student talent to the Toronto tech ecosystem.
+              A McGill Ventures initiative connecting Canada's most capable
+              young talent to the Toronto tech ecosystem.
             </p>
           </div>
 
