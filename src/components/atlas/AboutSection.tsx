@@ -105,7 +105,7 @@ const AboutSection = () => {
             Sign Up Now
           </a>
           <p className="font-mono text-xs text-muted-foreground mt-4">
-            Limited to 150 spots
+            Limited to 100 spots
           </p>
         </motion.div>
       </div>

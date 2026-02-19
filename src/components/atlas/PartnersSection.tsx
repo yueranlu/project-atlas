@@ -70,7 +70,7 @@ const PartnersSection = () => {
               transition={{ duration: 0.8 }}
               className="font-serif text-2xl md:text-3xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
-              Proudly supported by leading firms and organizations across
+              Previously partnered with leading firms and organizations across
               Canada's innovation ecosystem
             </motion.h3>
 
