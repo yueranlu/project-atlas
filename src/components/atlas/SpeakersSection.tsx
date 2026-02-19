@@ -54,7 +54,7 @@ const SpeakersSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-spaced-wide text-foreground mb-6"
+          className="font-serif text-4xl md:text-6xl lg:text-8xl font-bold text-spaced-wide text-foreground mb-6"
         >
           Schedule
         </motion.h2>

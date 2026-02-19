@@ -46,35 +46,37 @@ const HeroSection = () => {
           Montreal → Toronto Tech Week
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="mt-12 flex flex-col items-start text-left max-w-lg"
-        >
-          <p className="font-mono text-xs text-spaced text-muted-foreground">
-            Connecting Canada's Young Builders to the World
-          </p>
-          <div className="flex items-center gap-4 mt-3">
-            <div className="w-12 h-[1px] bg-primary/50" />
-            <p className="font-mono text-xs text-muted-foreground">
-              100+ students · 300+ events · 5 days
+        <div className="flex flex-col md:flex-row md:justify-between items-start gap-8 mt-12">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className="flex flex-col items-start text-left"
+          >
+            <p className="font-mono text-[10px] md:text-xs text-spaced text-muted-foreground">
+              Connecting Canada's Young Builders to the World
             </p>
-          </div>
-        </motion.div>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 mt-3">
+              <div className="hidden md:block w-12 h-[1px] bg-primary/50" />
+              <p className="font-mono text-[10px] md:text-xs text-muted-foreground">
+                100+ students · 300+ events · 5 days
+              </p>
+            </div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.6 }}
-          className="absolute bottom-0 right-6 flex flex-col items-end gap-2"
-        >
-          <span className="font-mono text-xs px-3 py-1 border border-primary/50 rounded-full text-primary">
-            MAY 24–30
-          </span>
-          <span className="font-mono text-xs text-muted-foreground">TORONTO TECH WEEK</span>
-          <span className="font-mono text-xs text-muted-foreground">TORONTO, ON</span>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+            className="flex flex-col items-start md:items-end gap-2 w-full md:w-auto"
+          >
+            <span className="font-mono text-[10px] md:text-xs px-3 py-1 border border-primary/50 rounded-full text-primary">
+              MAY 24–30
+            </span>
+            <span className="font-mono text-[10px] md:text-xs text-muted-foreground">TORONTO TECH WEEK</span>
+            <span className="font-mono text-[10px] md:text-xs text-muted-foreground">TORONTO, ON</span>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
