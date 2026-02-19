@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import BackgroundOrb from "./BackgroundOrb";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 const AboutSection = () => {
   return (
@@ -36,23 +35,12 @@ const AboutSection = () => {
                 this year. New York, SF, London next.
               </p>
 
-              <div className="flex gap-4 mt-8">
-                <a href="#apply">
-                  <ShimmerButton
-                    shimmerColor="#a855f7"
-                    background="hsl(270, 80%, 60%)"
-                    className="font-mono text-xs text-spaced"
-                  >
-                    Apply Now
-                  </ShimmerButton>
-                </a>
-                <a
+              <a
                   href="#schedule"
-                  className="font-mono text-xs px-6 py-3 rounded-full border-glow text-foreground hover:bg-secondary transition-colors text-spaced"
+                  className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors mt-6 inline-block"
                 >
-                  View Schedule
+                  ↓ View Schedule
                 </a>
-              </div>
             </motion.div>
           </div>
 
@@ -99,6 +87,27 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Prominent Sign Up CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-20 text-center"
+        >
+          <a
+            href="https://wygo.world/29tcrxw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-12 py-5 rounded-full bg-primary text-primary-foreground font-mono text-sm text-spaced hover:bg-primary/80 transition-colors glow-purple"
+          >
+            Sign Up Now
+          </a>
+          <p className="font-mono text-xs text-muted-foreground mt-4">
+            Free entry · Limited to 150 spots
+          </p>
+        </motion.div>
       </div>
     </section>
   );

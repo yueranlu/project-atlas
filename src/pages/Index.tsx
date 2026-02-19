@@ -1,4 +1,3 @@
-import Navbar from "@/components/atlas/Navbar";
 import HeroSection from "@/components/atlas/HeroSection";
 import AboutSection from "@/components/atlas/AboutSection";
 import StatsBar from "@/components/atlas/StatsBar";
@@ -12,7 +11,6 @@ import FooterSection from "@/components/atlas/FooterSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <HeroSection />
       <AboutSection />
       <StatsBar />
