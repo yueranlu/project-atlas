@@ -14,18 +14,6 @@ const FooterSection = () => {
 
           <div>
             <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
-              Contact
-            </h3>
-            <p className="font-mono text-xs text-muted-foreground">
-              Get in touch with the Project Atlas team
-            </p>
-            <a href="mailto:atlas@mcgillventures.ca" className="font-mono text-xs text-primary hover:text-primary/80 transition-colors mt-2 inline-block">
-              atlas@mcgillventures.ca
-            </a>
-          </div>
-
-          <div>
-            <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
               Follow Us
             </h3>
             <div className="flex flex-col gap-2">

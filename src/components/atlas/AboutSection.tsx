@@ -55,14 +55,14 @@ const AboutSection = () => {
               <div className="space-y-3">
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&q=80"
+                    src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(1).png"
                     alt="Students collaborating"
                     className="w-full h-32 md:h-48 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
-                    src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&q=80"
+                    src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(2).png"
                     alt="Toronto skyline at night"
                     className="w-full h-40 md:h-64 object-cover"
                   />
@@ -71,14 +71,14 @@ const AboutSection = () => {
               <div className="space-y-3 pt-8">
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
-                    src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&q=80"
+                    src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(3).png"
                     alt="Conference presentation"
                     className="w-full h-40 md:h-64 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border-glow">
                   <img
-                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80"
+                    src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image.png"
                     alt="Toronto CN Tower"
                     className="w-full h-32 md:h-48 object-cover"
                   />
