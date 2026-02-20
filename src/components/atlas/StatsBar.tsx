@@ -5,7 +5,7 @@ const stats = [
   { value: 100, suffix: "+", label: "Students" },
   { value: 300, suffix: "+", label: "Events" },
   { value: 30, label: "Team Members" },
-  { value: 5, suffix: "", label: "Days" },
+  { value: 7, suffix: "", label: "Days" },
 ];
 
 const StatsBar = () => {

@@ -29,13 +29,13 @@ const FooterSection = () => {
               Follow Us
             </h3>
             <div className="flex flex-col gap-2">
-              <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.linkedin.com/company/mcgillvc" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
                 LinkedIn — McGill Ventures
               </a>
-              <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://x.com/mcgillvc" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
                 X — @mcgillvc
               </a>
-              <a href="#" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.instagram.com/mcgillvc/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Instagram — @mcgillvc
               </a>
             </div>

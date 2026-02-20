@@ -6,7 +6,7 @@ import { Particles } from "@/components/ui/particles";
 const details = [
   {
     title: "Accommodation",
-    desc: "Shared housing near downtown Toronto through Airbnb so you can maximize your time at events and meet like-minded individuals. Breakfast included.",
+    desc: "Shared housing near downtown Toronto through Airbnb so you can maximize your time at events and meet like-minded individuals.",
     icon: Bed,
   },
   {
