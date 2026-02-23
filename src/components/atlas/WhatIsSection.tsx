@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import startupfestImg from "@/assets/startupfest.png";
-import scarletPitchImg from "@/assets/scarlet-pitch.jpg";
 
 const events = [
   {
@@ -29,7 +28,7 @@ const events = [
   },
   {
     name: "Scarlet Pitch",
-    image: scarletPitchImg,
+    image: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=800,height=500/event-covers/df/1f5d2f8c-6805-4f44-bc0f-f35c1b1c9585.png",
     stats: [
       { value: 300, suffix: "+", label: "Attendees" },
       { value: 5, label: "Pitches" },
