@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -33,7 +32,7 @@ const PartnerModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             </div>
 
             <p className="text-muted-foreground mb-8">
-              Are you a VC firm or a startup looking to partner with us?
+              Are you a corporate organization or a startup looking to partner with us?
             </p>
 
             <div className="space-y-4">
@@ -44,7 +43,7 @@ const PartnerModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                 rel="noopener noreferrer"
                 className="block w-full font-mono text-xs px-6 py-4 rounded-lg border-glow text-foreground hover:bg-primary/10 transition-colors text-center text-spaced"
               >
-                VC Firm
+                Corporate Organization
               </a>
 
               {/* Startup Button */}

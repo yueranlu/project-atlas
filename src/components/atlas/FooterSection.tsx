@@ -14,6 +14,15 @@ const FooterSection = () => {
 
           <div>
             <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
+              Contact
+            </h3>
+            <a href="mailto:projectatlas.mvc@gmail.com" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors block mb-4">
+              projectatlas.mvc@gmail.com
+            </a>
+          </div>
+
+          <div>
+            <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
               Follow Us
             </h3>
             <div className="flex flex-col gap-2">
