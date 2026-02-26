@@ -1,12 +1,22 @@
+import atlasLogo from "@/assets/atlas-logo.png";
+
 const FooterSection = () => {
   return (
     <footer id="contact" className="py-16 px-6 border-t border-border">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h2 className="font-serif text-xl font-bold text-foreground mb-4">
-              PROJECT<span className="text-primary">.</span>ATLAS
-            </h2>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src={atlasLogo}
+                alt="Atlas"
+                className="w-8 h-8 object-contain"
+                style={{ filter: "drop-shadow(0 0 6px rgba(168, 85, 247, 0.6))" }}
+              />
+              <h2 className="font-serif text-xl font-bold text-foreground">
+                PROJECT<span className="text-primary">.</span>ATLAS
+              </h2>
+            </div>
             <p className="font-mono text-xs text-muted-foreground leading-relaxed">
               A McGill Ventures initiative connecting Canada's most capable young talent to major tech events.
             </p>

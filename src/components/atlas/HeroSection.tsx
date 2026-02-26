@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import GlobeBackground from "./GlobeBackground";
 import { Particles } from "@/components/ui/particles";
+import atlasLogo from "@/assets/atlas-logo.png";
 
 const HeroSection = () => {
   return (
@@ -8,17 +9,35 @@ const HeroSection = () => {
       {/* Globe background */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.9 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         className="absolute inset-0 z-0"
       >
         <GlobeBackground />
         <Particles className="absolute inset-0" quantity={60} color="#a855f7" size={0.6} staticity={30} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background pointer-events-none" />
       </motion.div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-[1400px] mx-auto w-full">
+        {/* Floating logo mark */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center mb-4"
+        >
+          <img
+            src={atlasLogo}
+            alt="Atlas logo"
+            className="w-28 h-28 md:w-36 md:h-36 object-contain"
+            style={{
+              filter:
+                "drop-shadow(0 0 30px rgba(168, 85, 247, 0.9)) drop-shadow(0 0 70px rgba(168, 85, 247, 0.4))",
+            }}
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
