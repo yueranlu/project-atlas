@@ -129,7 +129,7 @@ const RegisterSection = () => {
           {/* RIGHT — form with invert filter so dark text becomes light on dark bg */}
           <div className="flex-1 relative" style={{ background: "hsl(270, 15%, 4%)" }}>
             <iframe
-              src="https://wygo.world/projectatlas/form-embed"
+              src="https://wygo.world/29tcrxw/form-embed"
               className="w-full block"
               style={{
                 height: "100%",
