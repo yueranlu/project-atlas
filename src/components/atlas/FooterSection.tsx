@@ -18,7 +18,7 @@ const FooterSection = () => {
               </h2>
             </div>
             <p className="font-mono text-xs text-muted-foreground leading-relaxed">
-              A McGill Ventures initiative connecting Canada's most capable young talent to major tech events.
+              Connecting Canada's most capable young talent to major tech events, supported by McGill Ventures.
             </p>
           </div>
 
@@ -31,22 +31,6 @@ const FooterSection = () => {
             </a>
           </div>
 
-          <div>
-            <h3 className="font-mono text-xs text-spaced text-foreground mb-4">
-              Follow Us
-            </h3>
-            <div className="flex flex-col gap-2">
-              <a href="https://www.linkedin.com/company/mcgillvc" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
-                LinkedIn — McGill Ventures
-              </a>
-              <a href="https://x.com/mcgillvc" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
-                X — @mcgillvc
-              </a>
-              <a href="https://www.instagram.com/mcgillvc/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors">
-                Instagram — @mcgillvc
-              </a>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">

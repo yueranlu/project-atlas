@@ -44,7 +44,7 @@ const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="inline-block font-mono text-xs text-spaced border border-border px-4 py-1.5 rounded-full mb-8 text-muted-foreground"
         >
-          MCGILL VENTURES · MAY 2026
+          REGISTRATION OPEN · MAY 2026
         </motion.div>
 
         <motion.h1
