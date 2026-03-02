@@ -155,6 +155,7 @@ const WhyAttendSection = () => {
           {details.map((detail, i) => (
             <motion.div
               key={detail.title}
+              className="h-[380px]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

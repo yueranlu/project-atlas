@@ -72,13 +72,14 @@ const SpeakersSection = () => {
           {schedule.map((item, i) => (
             <motion.div
               key={item.day}
+              className="h-[210px]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <MagicCard
-                className="border-glow"
+                className="border-glow h-full"
                 gradientColor="hsl(270, 50%, 15%)"
                 gradientFrom="#7c3aed"
                 gradientTo="#a855f7"
