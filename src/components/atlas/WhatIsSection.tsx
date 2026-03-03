@@ -9,12 +9,12 @@ const events = [
     name: "North Star 2026",
     image: "https://img.playbook.com/Qz0aUJupHzdCgjeFCXLOLyqQPuKWhNGgV0xq1SXy6V4/w:1200/aHR0cHM6Ly9wcm9k/LnBsYXlib29rYXNz/ZXRzLmNvbS92MC8w/L3Byb2QvbGFyZ2Vf/cHJldmlld3MvODVk/MjcyZWEtNjVjNy00/YTRiLWE5ZmQtNDRi/MmI3NzVhODBiP3R0/bD1ob3VybHkmdmVy/aWZ5PTE3NzE1NTYz/OTktdGxZM3Q3NkJ1/WFlvbkpBeTVrakM0/ck84czFhb0Y4VllK/T3Z6QzdwTzlCayUz/RA.png",
     stats: [
-      { value: 800, suffix: "+", label: "Sign Ups" },
-      { value: 19, label: "Speakers" },
-      { value: 2, label: "Keynotes" },
+      { value: 900, suffix: "+", label: "Attendees" },
+      { value: 21, label: "Speakers" },
+      { value: 60, suffix: "+", label: "Startups" },
     ],
     year: "2026",
-    supporters: [],
+    supporters: ["McGill Ventures", "Tech Poutine", "La Entrepreneuriale d'HEC"],
   },
   {
     name: "Startupfest",
@@ -36,7 +36,7 @@ const events = [
       { value: 4, label: "Judges" },
     ],
     year: "2025",
-    supporters: ["Startupfest", "Inovia", "Real Ventures"],
+    supporters: ["ElanTech", "McGill Ventures"],
   },
 ];
 

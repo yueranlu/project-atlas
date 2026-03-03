@@ -10,17 +10,18 @@ const schedule = [
     icon: Bus,
     details: [
       "9:00 AM — Bus from McGill (McTavish St)",
-      "6:00 PM — Arrive Toronto, transfer to Airbnb",
+      "6:00 PM — Arrive Toronto",
       "7:30 PM — Dinner, Icebreakers & Pitch Night",
     ],
   },
   {
-    day: "Mon, May 25",
+    day: "Mon–Fri, May 25–29",
     title: "Exclusive Site Visits",
     icon: MapPin,
     details: [
-      "9:00 AM – 7:00 PM — Partner office tours",
+      "Partner office tours throughout the week",
       "Networking with Toronto's top firms",
+      "NationGraph visit pending confirmation — full schedule shared with participants only",
     ],
   },
   {
@@ -28,7 +29,7 @@ const schedule = [
     title: "Toronto Tech Week",
     icon: Calendar,
     details: [
-      "Breakfast at Airbnb each morning",
+      "Breakfast at dorms each morning",
       "300+ events to explore all day",
       "Curated founder dinners & closed events",
     ],
@@ -38,7 +39,7 @@ const schedule = [
     title: "Return to Montreal",
     icon: Home,
     details: [
-      "10:00 AM — Bus departure from Toronto",
+      "9:00 AM — Bus departure from Toronto",
       "6:00 PM — Arrive McGill (McTavish St)",
     ],
   },

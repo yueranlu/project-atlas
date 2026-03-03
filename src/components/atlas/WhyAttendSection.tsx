@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { Bed, Bus, Sparkles, Camera } from "lucide-react";
+import { Bed, Bus, Sparkles } from "lucide-react";
 import { MagicCard } from "@/components/ui/magic-card";
 import { Particles } from "@/components/ui/particles";
 
 const details = [
   {
     title: "Accommodation",
-    desc: "Shared housing near downtown Toronto through Airbnb so you can maximize your time at events and meet like-minded individuals.",
+    desc: "Shared housing near downtown Toronto in dorms so you can maximize your time at events and meet like-minded individuals.",
     icon: Bed,
     tag: "Housing",
-    meta: ["Downtown Toronto", "Airbnb"],
+    meta: ["Downtown Toronto", "Dorms"],
     bullets: null,
   },
   {
@@ -27,14 +27,6 @@ const details = [
     tag: "Exclusive",
     meta: ["300+ Events", "Partner Access"],
     bullets: ["Exclusive firm visits", "Founder dinners", "Closed 5–7 events", "Curated site tours"],
-  },
-  {
-    title: "Documentary",
-    desc: "A professional camera crew will document the entire trip — capturing the energy, the people, and the moments that define Atlas.",
-    icon: Camera,
-    tag: "Film",
-    meta: ["Professional Crew", "Atlas 2026"],
-    bullets: null,
   },
 ];
 
