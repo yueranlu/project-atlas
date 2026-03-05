@@ -114,7 +114,7 @@ const RegisterSection = () => {
               {[
                 { label: "Dates", value: "May 24–30, 2026"   },
                 { label: "Route", value: "Montreal → Toronto" },
-                { label: "Spots", value: "100 students"       },
+                { label: "Spots", value: "20 students"        },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between">
                   <span className="font-mono text-[10px] tracking-widest uppercase" style={{ color: "hsl(270, 40%, 60%)" }}>

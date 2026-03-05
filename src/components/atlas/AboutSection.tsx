@@ -96,17 +96,6 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-20 text-center"
         >
-          <a
-            href="https://wygo.world/29tcrxw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-12 py-5 rounded-full bg-primary text-primary-foreground font-mono text-sm text-spaced hover:bg-primary/80 transition-colors glow-purple"
-          >
-            Join Us
-          </a>
-          <p className="font-mono text-xs text-muted-foreground mt-4">
-            Limited to 100 spots
-          </p>
         </motion.div>
       </div>
     </section>

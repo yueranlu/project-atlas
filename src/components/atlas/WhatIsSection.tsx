@@ -3,11 +3,12 @@ import { DotPattern } from "@/components/ui/dot-pattern";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import startupfestImg from "@/assets/startupfest.png";
 import scarletPitchImg from "@/assets/scarlet-pitch.jpg";
+import northStarImg from "@/assets/north-star.jpg";
 
 const events = [
   {
     name: "North Star 2026",
-    image: "https://img.playbook.com/Qz0aUJupHzdCgjeFCXLOLyqQPuKWhNGgV0xq1SXy6V4/w:1200/aHR0cHM6Ly9wcm9k/LnBsYXlib29rYXNz/ZXRzLmNvbS92MC8w/L3Byb2QvbGFyZ2Vf/cHJldmlld3MvODVk/MjcyZWEtNjVjNy00/YTRiLWE5ZmQtNDRi/MmI3NzVhODBiP3R0/bD1ob3VybHkmdmVy/aWZ5PTE3NzE1NTYz/OTktdGxZM3Q3NkJ1/WFlvbkpBeTVrakM0/ck84czFhb0Y4VllK/T3Z6QzdwTzlCayUz/RA.png",
+    image: northStarImg,
     stats: [
       { value: 900, suffix: "+", label: "Attendees" },
       { value: 21, label: "Speakers" },

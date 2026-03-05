@@ -26,7 +26,7 @@ const details = [
     icon: Sparkles,
     tag: "Exclusive",
     meta: ["300+ Events", "Partner Access"],
-    bullets: ["Exclusive firm visits", "Founder dinners", "Closed 5–7 events", "Curated site tours"],
+    bullets: ["Exclusive firm visits (Nationgraph, General Magic)", "Founder dinners", "Closed 5–7 events", "Curated site tours"],
   },
 ];
 
