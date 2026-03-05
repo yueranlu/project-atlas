@@ -4,7 +4,6 @@ import { NumberTicker } from "@/components/ui/number-ticker";
 const stats = [
   { value: 20, label: "Students" },
   { value: 300, suffix: "+", label: "Events" },
-  { value: 30, label: "Team Members" },
   { value: 7, suffix: "", label: "Days" },
 ];
 
