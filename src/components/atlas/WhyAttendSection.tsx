@@ -1,104 +1,145 @@
 import { motion } from "framer-motion";
-import { Bed, Bus, Sparkles } from "lucide-react";
+import { Zap, Building2, Users } from "lucide-react";
 import { MagicCard } from "@/components/ui/magic-card";
 import { Particles } from "@/components/ui/particles";
 
-const details = [
+const whyUs = [
   {
-    title: "Accommodation",
-    desc: "Shared housing near downtown Toronto in dorms so you can maximize your time at events and meet like-minded individuals.",
-    icon: Bed,
-    tag: "Housing",
-    meta: ["Downtown Toronto", "Dorms"],
-    bullets: null,
+    index: "01",
+    eyebrow: "Access",
+    icon: Zap,
+    headline: "Private Events",
+    sub: "NationGraph & General Magic",
+    body: "Closed-door sessions not on the public schedule.",
+    stat: "2",
+    statLabel: "exclusive firms",
+    tags: ["NationGraph", "General Magic", "Closed-door"],
   },
   {
-    title: "Transportation",
-    desc: "Bus travel from Montreal to and from Toronto Tech Week to facilitate conversation and connection from the very start.",
-    icon: Bus,
-    tag: "Travel",
-    meta: ["Montreal ↔ Toronto", "Coach Bus"],
-    bullets: null,
+    index: "02",
+    eyebrow: "Network",
+    icon: Building2,
+    headline: "Firm Visits",
+    sub: "VCs & Founders",
+    body: "Curated office tours with the people building and funding what's next.",
+    stat: "10+",
+    statLabel: "partner firms",
+    tags: ["Venture Capital", "Founders", "Site Tours"],
   },
   {
-    title: "Curated Experiences",
-    desc: null,
-    icon: Sparkles,
-    tag: "Exclusive",
-    meta: ["300+ Events", "Partner Access"],
-    bullets: ["Exclusive firm visits (Nationgraph, General Magic)", "Founder dinners", "Closed 5–7 events", "Curated site tours"],
+    index: "03",
+    eyebrow: "Community",
+    icon: Users,
+    headline: "Your Cohort",
+    sub: "McGill students, one trip",
+    body: "7 days alongside ambitious peers — connections that outlast the week.",
+    stat: "7",
+    statLabel: "days together",
+    tags: ["McGill Alumni", "Cohort", "Lifelong Network"],
   },
 ];
 
-const CardContent = ({ detail, index }: { detail: typeof details[0]; index: number }) => (
-  <div className="p-8 flex flex-col h-full relative overflow-hidden">
-    {/* Watermark number */}
-    <span
-      className="pointer-events-none select-none absolute right-4 top-2 font-serif font-bold leading-none text-primary/[0.05]"
-      style={{ fontSize: "110px" }}
-      aria-hidden="true"
+const WhyUsCard = ({ item, i }: { item: typeof whyUs[0]; i: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7, delay: i * 0.1 }}
+    className="relative group"
+  >
+    <MagicCard
+      className="border-glow h-full"
+      gradientColor="hsl(270, 50%, 15%)"
+      gradientFrom="#7c3aed"
+      gradientTo="#a855f7"
+      gradientOpacity={0.15}
+      gradientSize={320}
     >
-      {String(index + 1).padStart(2, "0")}
-    </span>
+      <div className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
 
-    {/* Top row */}
-    <div className="flex items-center justify-between mb-7 relative z-10">
-      <div className="flex items-center gap-3">
-        <span className="font-mono text-[10px] tracking-[0.2em] text-primary/50">
-          0{index + 1}
-        </span>
-        <div className="w-px h-3 bg-primary/20" />
-        <span className="font-mono text-[10px] tracking-widest text-primary/40 uppercase">
-          {detail.tag}
-        </span>
-      </div>
-      <detail.icon className="w-4 h-4 text-primary/30" />
-    </div>
-
-    {/* Title */}
-    <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-5 relative z-10">
-      {detail.title}
-    </h3>
-
-    {/* Divider */}
-    <div
-      className="mb-5 relative z-10"
-      style={{ height: "1px", background: "linear-gradient(to right, rgba(168,85,247,0.4), transparent)" }}
-    />
-
-    {/* Description or bullets */}
-    <div className="flex-1 relative z-10">
-      {detail.bullets ? (
-        <ul className="space-y-2.5">
-          {detail.bullets.map((b) => (
-            <li key={b} className="flex items-start gap-2.5">
-              <span className="mt-1.5 w-1 h-1 rounded-full bg-primary/50 shrink-0" />
-              <span className="font-mono text-[13px] text-muted-foreground leading-relaxed">{b}</span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="font-mono text-[13px] text-muted-foreground leading-relaxed">{detail.desc}</p>
-      )}
-    </div>
-
-    {/* Meta tags */}
-    <div className="flex flex-wrap gap-2 mt-6 relative z-10">
-      {detail.meta.map((m) => (
+        {/* Watermark number */}
         <span
-          key={m}
-          className="font-mono text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full"
-          style={{
-            border: "1px solid rgba(168,85,247,0.2)",
-            color: "rgba(168,85,247,0.55)",
-            background: "rgba(168,85,247,0.05)",
-          }}
+          className="pointer-events-none select-none absolute -right-3 -top-6 font-serif font-bold leading-none"
+          style={{ fontSize: "180px", color: "rgba(168,85,247,0.04)" }}
+          aria-hidden="true"
         >
-          {m}
+          {item.index}
         </span>
-      ))}
-    </div>
-  </div>
+
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-7 relative z-10">
+          <span className="font-mono text-[10px] tracking-[0.25em] text-primary/40 uppercase">{item.index}</span>
+          <div className="w-px h-3 bg-primary/20" />
+          <span className="font-mono text-[10px] tracking-widest text-primary/40 uppercase">{item.eyebrow}</span>
+        </div>
+
+        {/* Large icon */}
+        <div className="mb-6 relative z-10">
+          <div
+            className="w-20 h-20 rounded-2xl flex items-center justify-center"
+            style={{
+              background: "rgba(124,58,237,0.1)",
+              border: "1px solid rgba(168,85,247,0.2)",
+              boxShadow: "0 0 32px rgba(124,58,237,0.15)",
+            }}
+          >
+            <item.icon className="w-10 h-10" style={{ color: "rgba(168,85,247,0.8)" }} />
+          </div>
+        </div>
+
+        {/* Headline + sub */}
+        <div className="relative z-10 mb-5">
+          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-[1.0] mb-2">
+            {item.headline}
+          </h3>
+          <p className="font-mono text-[11px] tracking-widest uppercase" style={{ color: "rgba(168,85,247,0.7)" }}>
+            {item.sub}
+          </p>
+        </div>
+
+        {/* Divider */}
+        <div
+          className="mb-5 relative z-10"
+          style={{ height: "1px", background: "linear-gradient(to right, rgba(168,85,247,0.35), transparent)" }}
+        />
+
+        {/* Stat — big visual number */}
+        <div className="flex items-end gap-3 mb-5 relative z-10">
+          <span
+            className="font-serif font-bold leading-none"
+            style={{ fontSize: "64px", color: "rgba(168,85,247,0.9)", lineHeight: 1 }}
+          >
+            {item.stat}
+          </span>
+          <span className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-widest">
+            {item.statLabel}
+          </span>
+        </div>
+
+        {/* Body — one line max */}
+        <p className="font-mono text-sm text-muted-foreground leading-relaxed flex-1 relative z-10">
+          {item.body}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mt-7 relative z-10">
+          {item.tags.map((t) => (
+            <span
+              key={t}
+              className="font-mono text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full"
+              style={{
+                border: "1px solid rgba(168,85,247,0.2)",
+                color: "rgba(168,85,247,0.55)",
+                background: "rgba(168,85,247,0.05)",
+              }}
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </MagicCard>
+  </motion.div>
 );
 
 const WhyAttendSection = () => {
@@ -108,7 +149,7 @@ const WhyAttendSection = () => {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
 
-        {/* Section header */}
+        {/* Header */}
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -119,7 +160,7 @@ const WhyAttendSection = () => {
           >
             <div className="w-8 h-px" style={{ background: "rgba(168,85,247,0.5)" }} />
             <span className="font-mono text-[10px] tracking-[0.25em] text-primary/50 uppercase">
-              May 24–30 · Montreal → Toronto
+              What sets this apart
             </span>
           </motion.div>
 
@@ -128,44 +169,28 @@ const WhyAttendSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.05 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4"
+            className="font-serif text-5xl md:text-7xl lg:text-[7rem] font-bold text-foreground leading-[0.95] mb-4"
           >
-            Trip Details
+            Why Us?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-serif text-3xl md:text-4xl text-gradient-purple"
+            className="font-serif text-2xl md:text-3xl text-gradient-purple"
           >
-            What's Included
+            Access. Network. Community.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {details.map((detail, i) => (
-            <motion.div
-              key={detail.title}
-              className="h-[380px]"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-            >
-              <MagicCard
-                className="border-glow h-full"
-                gradientColor="hsl(270, 50%, 15%)"
-                gradientFrom="#7c3aed"
-                gradientTo="#a855f7"
-                gradientOpacity={0.15}
-                gradientSize={280}
-              >
-                <CardContent detail={detail} index={i} />
-              </MagicCard>
-            </motion.div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {whyUs.map((item, i) => (
+            <WhyUsCard key={item.index} item={item} i={i} />
           ))}
         </div>
+
       </div>
     </section>
   );
