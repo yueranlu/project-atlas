@@ -31,11 +31,11 @@ const whyUs = [
     eyebrow: "Community",
     icon: Users,
     headline: "Your Cohort",
-    sub: "McGill students, one trip",
+    sub: "Ambitious students, one trip",
     body: "7 days alongside ambitious peers — connections that outlast the week.",
     stat: "7",
     statLabel: "days together",
-    tags: ["McGill Alumni", "Cohort", "Lifelong Network"],
+    tags: ["Alumni", "Cohort", "Lifelong Network"],
   },
 ];
 
