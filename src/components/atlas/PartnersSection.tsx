@@ -24,6 +24,7 @@ import logoRBC            from "@/assets/partners/rbc.png";
 import logoFramework      from "@/assets/partners/framework.png";
 import logoMcKinsey       from "@/assets/partners/mckinsey.png";
 import logoNationGraph    from "@/assets/partners/nationgraph.png";
+import logoGarageCapital  from "@/assets/partners/GarageCapital_logo.png";
 
 // ── Partner data (order = sphere position) ────────────────────────────────────
 const partners = [
@@ -33,7 +34,7 @@ const partners = [
   { name: "Perplexity",            logo: logoPerplexity     },
   { name: "Inovia Capital",        logo: logoInovia         },
   { name: "National Bank",         logo: logoNationalBank   },
-  { name: "DormRoomFund",          logo: logoDormRoom       },
+  { name: "Garage Capital",        logo: logoGarageCapital  },
   { name: "White Star Capital",    logo: logoWhiteStar      },
   { name: "Antler",                logo: logoAntler         },
   { name: "Lightspeed",            logo: logoLightspeed     },
@@ -46,6 +47,7 @@ const partners = [
   { name: "RBC",                   logo: logoRBC            },
   { name: "Framework",             logo: logoFramework      },
   { name: "McKinsey & Company",    logo: logoMcKinsey       },
+  { name: "DormRoomFund",          logo: logoDormRoom       },
   { name: "NationGraph",           logo: logoNationGraph    },
 ];
 
