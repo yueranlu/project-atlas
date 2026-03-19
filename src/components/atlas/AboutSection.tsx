@@ -1,18 +1,6 @@
 import { motion } from "framer-motion";
 import BackgroundOrb from "./BackgroundOrb";
 
-const imageHoverEnter = (e: React.MouseEvent<HTMLDivElement>) => {
-  const el = e.currentTarget as HTMLElement;
-  el.style.zIndex = "50";
-  el.style.boxShadow =
-    "0 0 0 3px rgba(147, 51, 234, 0.7), 0 0 40px 14px rgba(147, 51, 234, 0.45)";
-};
-
-const imageHoverLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-  const el = e.currentTarget as HTMLElement;
-  el.style.zIndex = "0";
-  el.style.boxShadow = "";
-};
 
 const AboutSection = () => {
   return (
@@ -66,64 +54,36 @@ const AboutSection = () => {
           >
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-3">
-                <motion.div
-                  whileHover={{ scale: 1.25 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="rounded-2xl border-glow cursor-pointer relative"
-                  style={{ zIndex: 0 }}
-                  onMouseEnter={imageHoverEnter}
-                  onMouseLeave={imageHoverLeave}
-                >
+                <div className="rounded-2xl border-glow relative">
                   <img
                     src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(1).png"
                     alt="Students collaborating"
                     className="w-full h-32 md:h-48 object-cover rounded-2xl"
                   />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.25 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="rounded-2xl border-glow cursor-pointer relative"
-                  style={{ zIndex: 0 }}
-                  onMouseEnter={imageHoverEnter}
-                  onMouseLeave={imageHoverLeave}
-                >
+                </div>
+                <div className="rounded-2xl border-glow relative">
                   <img
                     src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(2).png"
                     alt="Toronto skyline at night"
                     className="w-full h-40 md:h-64 object-cover rounded-2xl"
                   />
-                </motion.div>
+                </div>
               </div>
               <div className="space-y-3 pt-8">
-                <motion.div
-                  whileHover={{ scale: 1.25 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="rounded-2xl border-glow cursor-pointer relative"
-                  style={{ zIndex: 0 }}
-                  onMouseEnter={imageHoverEnter}
-                  onMouseLeave={imageHoverLeave}
-                >
+                <div className="rounded-2xl border-glow relative">
                   <img
                     src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image%20(3).png"
                     alt="Conference presentation"
                     className="w-full h-40 md:h-64 object-cover rounded-2xl"
                   />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.25 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="rounded-2xl border-glow cursor-pointer relative"
-                  style={{ zIndex: 0 }}
-                  onMouseEnter={imageHoverEnter}
-                  onMouseLeave={imageHoverLeave}
-                >
+                </div>
+                <div className="rounded-2xl border-glow relative">
                   <img
                     src="https://raw.githubusercontent.com/Babushka1/McDave/05c5a5ffbb60e387a2008a762d01d0bd338acb2c/image.png"
                     alt="Toronto CN Tower"
                     className="w-full h-32 md:h-48 object-cover rounded-2xl"
                   />
-                </motion.div>
+                </div>
               </div>
             </div>
           </motion.div>

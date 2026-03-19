@@ -95,7 +95,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.6 }}
-          className="font-serif text-2xl md:text-4xl lg:text-5xl text-foreground mt-16 mb-4 tracking-tight font-bold"
+          className="font-serif text-2xl md:text-4xl lg:text-5xl mt-16 mb-4 tracking-tight font-bold"
+          style={{
+            background: "linear-gradient(135deg, #e9d5ff 0%, #c084fc 50%, #a855f7 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
         >
           {"Connecting Canada's Young Builders to the World".split("").map((char, i) => (
             <motion.span
