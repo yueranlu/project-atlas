@@ -25,11 +25,11 @@ const ScheduleSection = () => {
   }, [mouseX, mouseY]);
 
   return (
-    <section id="schedule" className="relative py-32 px-6 bg-card overflow-hidden">
-      <div className="max-w-[1400px] mx-auto relative z-10">
+    <section id="schedule" className="py-24 px-6">
+      <div className="max-w-[1300px] mx-auto">
 
         {/* Header */}
-        <div className="mb-14">
+        <div className="mb-10">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const ScheduleSection = () => {
           </motion.p>
         </div>
 
-        {/* Calendar embed with glowing border */}
+        {/* Calendar embed — same card shell as RegisterSection */}
         <motion.div
           ref={cardRef}
           initial={{ opacity: 0, y: 24 }}
@@ -81,16 +81,15 @@ const ScheduleSection = () => {
             }}
           />
 
-          {/* Inner container */}
+          {/* Inner card */}
           <div
             className="relative rounded-[15px] overflow-hidden"
-            style={{ background: "hsl(270, 20%, 5%)" }}
+            style={{ minHeight: "800px", background: "hsl(270, 20%, 5%)" }}
           >
             <iframe
               src="https://lu.ma/embed/calendar/cal-fsnoYpbQu1679OM/events"
               width="100%"
-              height="650"
-              style={{ border: "none", display: "block" }}
+              style={{ border: "none", display: "block", minHeight: "800px" }}
               allowFullScreen
               aria-hidden="false"
               tabIndex={0}

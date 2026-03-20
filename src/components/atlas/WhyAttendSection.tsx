@@ -55,83 +55,44 @@ const WhyUsCard = ({ item, i }: { item: typeof whyUs[0]; i: number }) => (
       gradientOpacity={0.15}
       gradientSize={320}
     >
-      <div className="p-8 md:p-10 flex flex-col h-full relative overflow-hidden">
-
-        {/* Watermark number */}
-        <span
-          className="pointer-events-none select-none absolute -right-3 -top-6 font-serif font-bold leading-none"
-          style={{ fontSize: "180px", color: "rgba(168,85,247,0.04)" }}
-          aria-hidden="true"
-        >
-          {item.index}
-        </span>
+      <div className="p-8 md:p-10 flex flex-col h-full">
 
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-7 relative z-10">
-          <span className="font-mono text-[10px] tracking-[0.25em] text-primary/40 uppercase">{item.index}</span>
-          <div className="w-px h-3 bg-primary/20" />
-          <span className="font-mono text-[10px] tracking-widest text-primary/40 uppercase">{item.eyebrow}</span>
-        </div>
-
-        {/* Large icon */}
-        <div className="mb-6 relative z-10">
-          <div
-            className="w-20 h-20 rounded-2xl flex items-center justify-center"
-            style={{
-              background: "rgba(124,58,237,0.1)",
-              border: "1px solid rgba(168,85,247,0.2)",
-              boxShadow: "0 0 32px rgba(124,58,237,0.15)",
-            }}
-          >
-            <item.icon className="w-10 h-10" style={{ color: "rgba(168,85,247,0.8)" }} />
-          </div>
+        <div className="flex items-center gap-3 mb-8">
+          <item.icon className="w-4 h-4 text-primary/50" />
+          <span className="font-mono text-[10px] tracking-[0.25em] text-primary/50 uppercase">{item.eyebrow}</span>
         </div>
 
         {/* Headline + sub */}
-        <div className="relative z-10 mb-5">
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-[1.0] mb-2">
+        <div className="mb-4">
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-2">
             {item.headline}
           </h3>
-          <p className="font-mono text-[11px] tracking-widest uppercase" style={{ color: "rgba(168,85,247,0.7)" }}>
+          <p className="font-mono text-[11px] text-muted-foreground">
             {item.sub}
           </p>
         </div>
 
         {/* Divider */}
-        <div
-          className="mb-5 relative z-10"
-          style={{ height: "1px", background: "linear-gradient(to right, rgba(168,85,247,0.35), transparent)" }}
-        />
+        <div className="mb-5 h-px bg-border" />
 
-        {/* Stat — big visual number */}
-        <div className="flex items-end gap-3 mb-5 relative z-10">
-          <span
-            className="font-serif font-bold leading-none"
-            style={{ fontSize: "64px", color: "rgba(168,85,247,0.9)", lineHeight: 1 }}
-          >
-            {item.stat}
-          </span>
-          <span className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-widest">
-            {item.statLabel}
-          </span>
+        {/* Stat */}
+        <div className="flex items-baseline gap-2 mb-5">
+          <span className="font-serif text-3xl font-bold text-foreground">{item.stat}</span>
+          <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">{item.statLabel}</span>
         </div>
 
-        {/* Body — one line max */}
-        <p className="font-mono text-sm text-muted-foreground leading-relaxed flex-1 relative z-10">
+        {/* Body */}
+        <p className="font-mono text-sm text-muted-foreground leading-relaxed flex-1">
           {item.body}
         </p>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-7 relative z-10">
+        <div className="flex flex-wrap gap-2 mt-6">
           {item.tags.map((t) => (
             <span
               key={t}
-              className="font-mono text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full"
-              style={{
-                border: "1px solid rgba(168,85,247,0.2)",
-                color: "rgba(168,85,247,0.55)",
-                background: "rgba(168,85,247,0.05)",
-              }}
+              className="font-mono text-[9px] tracking-widest uppercase px-2.5 py-1 rounded-full border-glow text-muted-foreground"
             >
               {t}
             </span>

@@ -19,8 +19,8 @@ const Index = () => {
       <SpeakersSection />
       <VelocityMarquee />
       <WhyAttendSection />
-      <ScheduleSection />
       <RegisterSection />
+      <ScheduleSection />
       <VelocityMarquee />
       <PartnersSection />
       <WhatIsSection />
