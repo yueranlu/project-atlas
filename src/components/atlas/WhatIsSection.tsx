@@ -46,49 +46,6 @@ const WhatIsSection = () => {
     <section className="relative py-32 px-6 bg-card overflow-hidden">
       <DotPattern className="text-purple-400/8" width={20} height={20} cr={0.6} />
       <div className="max-w-[1400px] mx-auto relative z-10">
-        <div className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-2">
-              About
-            </h2>
-            <h3 className="font-serif text-5xl md:text-7xl font-bold text-gradient-purple mb-8">
-              McGill Ventures
-            </h3>
-
-            <p className="font-mono text-sm leading-loose text-muted-foreground max-w-2xl">
-              A student-run initiative advancing access to Venture Capital through
-              networking events, panel discussions, and an exclusive analyst program.
-              30 team members. Thousands of attendees.
-            </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-              {[
-                { label: "McGill Ventures Fund", desc: "Investing in McGill startups" },
-                { label: "Health Tech Innovation Lab (HTIL)", desc: "Stem-focused research for stem-related startups" },
-                { label: "Venture Advisory", desc: "Pro bono advisory" },
-                { label: "Analyst Program", desc: "VC mentorship from Canada's best" },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.1 }}
-                  className="p-4 rounded-xl border-glow bg-background/50"
-                >
-                  <p className="font-mono text-xs font-bold text-foreground">{item.label}</p>
-                  <p className="font-mono text-[10px] text-muted-foreground mt-1">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
         {/* Event Cards with Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -97,10 +54,10 @@ const WhatIsSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
-            Our Events
+            Past Events
           </h3>
           <p className="font-mono text-xs text-muted-foreground mb-10">
-            Flagship events hosted by McGill Ventures
+            Past events hosted by Project Atlas
           </p>
         </motion.div>
 

@@ -48,17 +48,13 @@ const RegisterSection = () => {
           {/* Inner card that covers the gradient, leaving 1px border showing */}
           <div
             className="relative flex rounded-[15px] overflow-hidden"
-            style={{ minHeight: "800px", background: "hsl(270, 20%, 5%)" }}
+            style={{ background: "hsl(270, 20%, 5%)" }}
           >
 
           {/* LEFT — sticky info panel */}
           <div
             className="hidden lg:flex lg:w-[38%] shrink-0 flex-col justify-between p-10 relative overflow-hidden"
             style={{
-              position: "sticky",
-              top: 0,
-              alignSelf: "flex-start",
-              height: "100vh",
               background: "linear-gradient(160deg, hsl(270, 60%, 12%) 0%, hsl(280, 40%, 6%) 50%, hsl(250, 50%, 8%) 100%)",
               borderRight: "1px solid hsl(270, 40%, 18%)",
             }}
@@ -133,10 +129,9 @@ const RegisterSection = () => {
               className="w-full block"
               style={{
                 height: "100%",
-                minHeight: "960px",
+                minHeight: "680px",
                 filter: "invert(1) hue-rotate(180deg)",
               }}
-              frameBorder="0"
               title="Atlas Registration Form"
             />
           </div>
