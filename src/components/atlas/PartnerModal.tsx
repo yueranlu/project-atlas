@@ -10,17 +10,17 @@ const PartnerModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center"
         >
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-background border border-border rounded-2xl p-8 max-w-md w-full mx-4"
+            className="bg-surface border border-stroke rounded-3xl p-8 max-w-md w-full mx-4"
           >
             <div className="flex justify-between items-center mb-6">
-              <h2 className="font-serif text-3xl font-bold text-foreground">
+              <h2 className="font-display text-3xl text-foreground">
                 Join Atlas
               </h2>
               <button
@@ -31,28 +31,28 @@ const PartnerModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               </button>
             </div>
 
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground text-sm mb-8">
               Are you a corporate organization or a startup looking to partner with us?
             </p>
 
             <div className="space-y-4">
-              {/* VC Firm Button */}
               <a
                 href="https://drive.google.com/file/d/15Yl23olQ0cfyXy6yyalnA6oL-Q1gVqiN/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full font-mono text-xs px-6 py-4 rounded-lg border-glow text-foreground hover:bg-primary/10 transition-colors text-center text-spaced"
+                className="group relative block w-full text-xs px-6 py-4 rounded-full border border-stroke text-foreground hover:border-transparent transition-all text-center uppercase tracking-[0.3em]"
               >
+                <span className="absolute inset-[-1px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
                 Corporate Organization
               </a>
 
-              {/* Startup Button */}
               <a
                 href="https://drive.google.com/file/d/1Uq2EIbvz46hJZ6uMEf3B9EeIaLC4FxNa/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full font-mono text-xs px-6 py-4 rounded-lg border-glow text-foreground hover:bg-primary/10 transition-colors text-center text-spaced"
+                className="group relative block w-full text-xs px-6 py-4 rounded-full border border-stroke text-foreground hover:border-transparent transition-all text-center uppercase tracking-[0.3em]"
               >
+                <span className="absolute inset-[-1px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
                 Startup
               </a>
             </div>

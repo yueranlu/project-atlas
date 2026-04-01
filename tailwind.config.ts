@@ -14,10 +14,14 @@ export default {
     },
     extend: {
       fontFamily: {
+        body: ["Inter", "sans-serif"],
+        display: ["Instrument Serif", "serif"],
         mono: ["DM Mono", "monospace"],
-        serif: ["Playfair Display", "serif"],
       },
       colors: {
+        surface: "hsl(var(--surface))",
+        stroke: "hsl(var(--stroke))",
+        "muted-tone": "hsl(var(--muted-tone))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -50,11 +54,6 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
-        purple: {
-          glow: "hsl(var(--purple-glow))",
-          deep: "hsl(var(--purple-deep))",
-          mid: "hsl(var(--purple-mid))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

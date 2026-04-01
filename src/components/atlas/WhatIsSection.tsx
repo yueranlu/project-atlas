@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { DotPattern } from "@/components/ui/dot-pattern";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import startupfestImg from "@/assets/startupfest.png";
 import scarletPitchImg from "@/assets/scarlet-pitch.jpg";
@@ -43,20 +42,24 @@ const events = [
 
 const WhatIsSection = () => {
   return (
-    <section className="relative py-32 px-6 bg-card overflow-hidden">
-      <DotPattern className="text-purple-400/8" width={20} height={20} cr={0.6} />
-      <div className="max-w-[1400px] mx-auto relative z-10">
-        {/* Event Cards with Stats */}
+    <section className="relative py-32 px-6 bg-surface overflow-hidden">
+      <div className="max-w-[1200px] mx-auto relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          className="mb-12"
         >
-          <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-8 h-px bg-stroke" />
+            <span className="text-xs text-muted-foreground uppercase tracking-[0.3em]">Track Record</span>
+          </div>
+          <h3 className="font-display text-4xl md:text-5xl text-foreground mb-2">
             Past Events
           </h3>
-          <p className="font-mono text-xs text-muted-foreground mb-10">
+          <p className="text-xs text-muted-foreground">
             Past events hosted by Project Atlas
           </p>
         </motion.div>
@@ -69,7 +72,7 @@ const WhatIsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="rounded-2xl border-glow bg-background/50 overflow-hidden group"
+              className="rounded-3xl border border-stroke bg-background/50 overflow-hidden group"
             >
               <div className="relative h-40 md:h-48 overflow-hidden">
                 <img
@@ -79,8 +82,8 @@ const WhatIsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <div className="absolute bottom-3 left-4">
-                  <p className="font-serif text-lg font-bold text-foreground">{event.name}</p>
-                  <span className="font-mono text-[10px] text-primary text-spaced">{event.year}</span>
+                  <p className="font-display text-lg text-foreground">{event.name}</p>
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-[0.3em]">{event.year}</span>
                 </div>
               </div>
 
@@ -88,11 +91,11 @@ const WhatIsSection = () => {
                 <div className="flex justify-between gap-2 mb-4">
                   {event.stats.map((stat, j) => (
                     <div key={j} className="text-center flex-1">
-                      <span className="font-serif text-2xl md:text-3xl font-bold text-foreground block">
+                      <span className="font-display text-2xl md:text-3xl text-foreground block">
                         <NumberTicker value={stat.value} delay={0.5 + j * 0.2} />
                         {stat.suffix || ""}
                       </span>
-                      <span className="font-mono text-[9px] text-muted-foreground text-spaced">
+                      <span className="text-[9px] text-muted-foreground uppercase tracking-[0.3em]">
                         {stat.label}
                       </span>
                     </div>
@@ -100,15 +103,15 @@ const WhatIsSection = () => {
                 </div>
 
                 {event.supporters.length > 0 && (
-                  <div className="pt-3 border-t border-border">
-                    <span className="font-mono text-[9px] text-muted-foreground text-spaced block mb-2">
+                  <div className="pt-3 border-t border-stroke">
+                    <span className="text-[9px] text-muted-foreground uppercase tracking-[0.3em] block mb-2">
                       Supported by
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {event.supporters.map((s) => (
                         <span
                           key={s}
-                          className="font-mono text-[10px] px-2 py-0.5 rounded-full border-glow text-muted-foreground"
+                          className="text-[10px] px-2 py-0.5 rounded-full border border-stroke text-muted-foreground"
                         >
                           {s}
                         </span>

@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
-import { DotPattern } from "@/components/ui/dot-pattern";
 
 const ScheduleSection = () => {
   return (
-    <section className="relative py-20 px-6 overflow-hidden">
-      <DotPattern className="text-purple-400/8" width={20} height={20} cr={0.6} />
-      <div className="max-w-[1400px] mx-auto relative z-10">
-
+    <section className="relative py-20 px-6 overflow-hidden bg-background">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           className="mb-10"
         >
-          <h2 className="font-serif text-4xl md:text-6xl lg:text-8xl font-bold text-spaced-wide text-foreground mb-3">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-8 h-px bg-stroke" />
+            <span className="text-xs text-muted-foreground uppercase tracking-[0.3em]">Upcoming</span>
+          </div>
+          <h2 className="font-display text-5xl md:text-7xl text-foreground leading-[0.95] mb-3">
             Calendar
           </h2>
-          <p className="font-mono text-sm text-muted-foreground max-w-lg">
+          <p className="text-sm text-muted-foreground max-w-lg">
             Upcoming firm visits, socials, and key dates — don't miss a thing.
           </p>
         </motion.div>
@@ -29,7 +30,7 @@ const ScheduleSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="rounded-2xl border border-border overflow-hidden bg-background/50"
+          className="rounded-3xl border border-stroke overflow-hidden bg-surface/50"
         >
           <iframe
             src="https://lu.ma/embed/calendar/cal-fsnoYpbQu1679OM/events?lt=dark"
@@ -41,7 +42,6 @@ const ScheduleSection = () => {
             title="Project Atlas Schedule"
           />
         </motion.div>
-
       </div>
     </section>
   );

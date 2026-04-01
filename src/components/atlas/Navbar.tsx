@@ -7,9 +7,10 @@ const navItems = ["About", "Schedule", "Partners", "Contact"];
 const Navbar = () => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("Home");
 
   useMotionValueEvent(scrollY, "change", (y) => {
-    setScrolled(y > 40);
+    setScrolled(y > 100);
   });
 
   return (
@@ -17,57 +18,64 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        background: scrolled ? "rgba(8, 4, 18, 0.85)" : "rgba(8, 4, 18, 0.3)",
-        backdropFilter: "blur(14px)",
-        borderBottom: scrolled
-          ? "1px solid rgba(168, 85, 247, 0.15)"
-          : "1px solid transparent",
-      }}
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 md:pt-6 px-4"
     >
-      <div className="max-w-[1400px] mx-auto px-6 py-3 flex items-center justify-between">
+      <div
+        className={`inline-flex items-center rounded-full backdrop-blur-md border border-white/10 bg-surface px-2 py-2 transition-shadow duration-300 ${
+          scrolled ? "shadow-md shadow-black/10" : ""
+        }`}
+      >
+        {/* Logo circle */}
+        <motion.a
+          href="#"
+          whileHover={{ scale: 1.1 }}
+          className="relative w-9 h-9 rounded-full flex items-center justify-center shrink-0 group"
+        >
+          {/* Gradient ring */}
+          <div
+            className="absolute inset-0 rounded-full p-[1.5px] group-hover:[background:linear-gradient(270deg,#89AACC_0%,#4E85BF_100%)]"
+            style={{ background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)" }}
+          >
+            <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+              <img src={atlasLogo} alt="Atlas" className="w-5 h-5 object-contain" />
+            </div>
+          </div>
+        </motion.a>
 
-        {/* Left — logo + name */}
-        <a href="#" className="flex items-center gap-3 group">
-          <motion.img
-            src={atlasLogo}
-            alt="Atlas"
-            className="w-8 h-8 object-contain"
-            style={{ filter: "drop-shadow(0 0 8px rgba(168, 85, 247, 0.6))" }}
-            whileHover={{ scale: 1.12 }}
-            transition={{ duration: 0.2 }}
-          />
-          <span className="font-serif text-sm font-bold text-white/85 tracking-wide group-hover:text-white transition-colors">
-            Project Atlas
-          </span>
-        </a>
+        {/* Divider */}
+        <div className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
 
-        {/* Centre — nav links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+        {/* Nav links */}
+        <div className="hidden sm:flex items-center">
+          {["Home", ...navItems].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
-              className="font-mono text-[10px] tracking-widest text-white/40 hover:text-white/80 transition-colors uppercase"
+              href={item === "Home" ? "#" : `#${item.toLowerCase()}`}
+              onClick={() => setActive(item)}
+              className={`text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 transition-colors ${
+                active === item
+                  ? "text-foreground bg-stroke/50"
+                  : "text-muted-foreground hover:text-foreground hover:bg-stroke/50"
+              }`}
             >
               {item}
             </a>
           ))}
         </div>
 
-        {/* Right — register CTA */}
+        {/* Divider */}
+        <div className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
+
+        {/* Register CTA */}
         <a
           href="#register"
-          className="font-mono text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full border transition-all duration-200 hover:bg-purple-500/10"
-          style={{
-            borderColor: "rgba(168, 85, 247, 0.45)",
-            color: "rgba(168, 85, 247, 0.9)",
-          }}
+          className="relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-foreground group overflow-visible"
         >
-          Register
+          <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity" />
+          <span className="relative z-10 flex items-center gap-1.5 bg-surface rounded-full px-3 py-1.5 backdrop-blur-md">
+            Register <span className="text-xs">&#8599;</span>
+          </span>
         </a>
-
       </div>
     </motion.nav>
   );

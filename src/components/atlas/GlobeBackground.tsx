@@ -6,18 +6,18 @@ const World = lazy(() =>
 
 const globeConfig = {
   pointSize: 4,
-  globeColor: "#1a0a2e",
+  globeColor: "#0a0a0a",
   showAtmosphere: true,
-  atmosphereColor: "#a855f7",
+  atmosphereColor: "#4E85BF",
   atmosphereAltitude: 0.28,
-  emissive: "#3d1a6e",
+  emissive: "#111111",
   emissiveIntensity: 0.35,
   shininess: 1.2,
-  polygonColor: "rgba(168, 85, 247, 0.6)",
-  ambientLight: "#7c3aed",
-  directionalLeftLight: "#c084fc",
-  directionalTopLight: "#e9d5ff",
-  pointLight: "#a855f7",
+  polygonColor: "rgba(137, 170, 204, 0.5)",
+  ambientLight: "#4E85BF",
+  directionalLeftLight: "#89AACC",
+  directionalTopLight: "#B8D4E8",
+  pointLight: "#4E85BF",
   arcTime: 1000,
   arcLength: 0.9,
   rings: 1,
@@ -27,7 +27,7 @@ const globeConfig = {
   autoRotateSpeed: 0.5,
 };
 
-const colors = ["#a855f7", "#7c3aed", "#c084fc", "#6d28d9"];
+const colors = ["#89AACC", "#4E85BF", "#6B9CC7", "#3A72AC"];
 
 const sampleArcs = [
   { order: 1, startLat: -19.885592, startLng: -43.951191, endLat: -22.9068, endLng: -43.1729, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] },
@@ -54,22 +54,6 @@ const sampleArcs = [
   { order: 8, startLat: -8.833221, startLng: 13.264837, endLat: -33.936138, endLng: 18.436529, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
   { order: 8, startLat: 49.2827, startLng: -123.1207, endLat: 52.3676, endLng: 4.9041, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
   { order: 8, startLat: 1.3521, startLng: 103.8198, endLat: 40.7128, endLng: -74.006, arcAlt: 0.5, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 9, startLat: 51.5072, startLng: -0.1276, endLat: 34.0522, endLng: -118.2437, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 9, startLat: 22.3193, startLng: 114.1694, endLat: -22.9068, endLng: -43.1729, arcAlt: 0.7, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 9, startLat: 1.3521, startLng: 103.8198, endLat: -34.6037, endLng: -58.3816, arcAlt: 0.5, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 10, startLat: -22.9068, startLng: -43.1729, endLat: 28.6139, endLng: 77.209, arcAlt: 0.7, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 10, startLat: 34.0522, startLng: -118.2437, endLat: 31.2304, endLng: 121.4737, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 10, startLat: -6.2088, startLng: 106.8456, endLat: 52.3676, endLng: 4.9041, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 11, startLat: 41.9028, startLng: 12.4964, endLat: 34.0522, endLng: -118.2437, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 11, startLat: -6.2088, startLng: 106.8456, endLat: 31.2304, endLng: 121.4737, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 11, startLat: 22.3193, startLng: 114.1694, endLat: 1.3521, endLng: 103.8198, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 12, startLat: 34.0522, startLng: -118.2437, endLat: 37.7749, endLng: -122.4194, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 12, startLat: 35.6762, startLng: 139.6503, endLat: 22.3193, endLng: 114.1694, arcAlt: 0.2, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 12, startLat: 22.3193, startLng: 114.1694, endLat: 34.0522, endLng: -118.2437, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 13, startLat: 52.52, startLng: 13.405, endLat: 22.3193, endLng: 114.1694, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 13, startLat: 11.986597, startLng: 8.571831, endLat: 35.6762, endLng: 139.6503, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 13, startLat: -22.9068, startLng: -43.1729, endLat: -34.6037, endLng: -58.3816, arcAlt: 0.1, color: colors[Math.floor(Math.random() * colors.length)] },
-  { order: 14, startLat: -33.936138, startLng: 18.436529, endLat: 21.395643, endLng: 39.883798, arcAlt: 0.3, color: colors[Math.floor(Math.random() * colors.length)] },
 ];
 
 export default function GlobeBackground() {
