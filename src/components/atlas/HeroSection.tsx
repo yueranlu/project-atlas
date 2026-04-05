@@ -63,6 +63,7 @@ const HeroSection = () => {
           loop
           playsInline
           className="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+          style={{ filter: "hue-rotate(60deg) saturate(1.2)" }}
         />
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent" />
@@ -128,7 +129,7 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
           className="text-[12vw] md:text-[10vw] lg:text-[180px] font-display leading-[0.85] tracking-tight"
           style={{
-            background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 50%, #89AACC 100%)",
+            background: "linear-gradient(90deg, #A989CC 0%, #7E4EBF 50%, #A989CC 100%)",
             backgroundSize: "200% 200%",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",

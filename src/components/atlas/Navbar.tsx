@@ -33,8 +33,8 @@ const Navbar = () => {
         >
           {/* Gradient ring */}
           <div
-            className="absolute inset-0 rounded-full p-[1.5px] group-hover:[background:linear-gradient(270deg,#89AACC_0%,#4E85BF_100%)]"
-            style={{ background: "linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)" }}
+            className="absolute inset-0 rounded-full p-[1.5px] group-hover:[background:linear-gradient(270deg,#A989CC_0%,#7E4EBF_100%)]"
+            style={{ background: "linear-gradient(90deg, #A989CC 0%, #7E4EBF 100%)" }}
           >
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
               <img src={atlasLogo} alt="Atlas" className="w-5 h-5 object-contain" />

@@ -116,7 +116,7 @@ const RegisterSection = () => {
                 </h2>
                 <p
                   className="font-display mt-4"
-                  style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)", color: "hsl(210 40% 70%)" }}
+                  style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)", color: "hsl(270 40% 70%)" }}
                 >
                   Save your spot.
                 </p>
