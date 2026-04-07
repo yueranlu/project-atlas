@@ -76,6 +76,22 @@ const Navbar = () => {
             Register <span className="text-xs">&#8599;</span>
           </span>
         </a>
+
+        {/* Divider */}
+        <div className="w-px h-5 bg-stroke mx-1 hidden sm:block" />
+
+        {/* Donate CTA */}
+        <a
+          href="https://wygo.world/projectatlas?donation_form=open"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative text-xs sm:text-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-foreground group overflow-visible"
+        >
+          <span className="absolute inset-[-2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity" />
+          <span className="relative z-10 flex items-center gap-1.5 bg-surface rounded-full px-3 py-1.5 backdrop-blur-md">
+            Donate <span className="text-xs">&#8599;</span>
+          </span>
+        </a>
       </div>
     </motion.nav>
   );
