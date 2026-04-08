@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import PartnerModal from "./PartnerModal";
 
 // Current Sponsor Logo imports
-import logoFoodHero from "@/assets/sponsors/foodhero.png";
-import logoBDO from "@/assets/sponsors/bdo.png";
-import logoOsler from "@/assets/sponsors/olser.png";
-import logoPlanned from "@/assets/sponsors/planned.png";
-import logoTriptyq from "@/assets/sponsors/triptyq.png";
+import logoFoodHero from "@/assets/foodhero.png";
+import logoBDO from "@/assets/bdo.png";
+import logoOsler from "@/assets/olser.png";
+import logoPlanned from "@/assets/planned.png";
+import logoTriptyq from "@/assets/triptyq.png";
 
 // Previous Partner Logo imports (for globe)
 import logoAnthropic from "@/assets/partners/anthropic.png";
