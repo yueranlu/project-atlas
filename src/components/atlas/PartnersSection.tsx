@@ -2,7 +2,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import PartnerModal from "./PartnerModal";
 
-// Logo imports
+// Current Sponsor Logo imports
+import logoFoodHero from "@/assets/sponsors/foodhero.png";
+import logoBDO from "@/assets/sponsors/bdo.png";
+import logoOsler from "@/assets/sponsors/olser.png";
+import logoPlanned from "@/assets/sponsors/planned.png";
+import logoTriptyq from "@/assets/sponsors/triptyq.png";
+
+// Previous Partner Logo imports (for globe)
 import logoAnthropic from "@/assets/partners/anthropic.png";
 import logoGoogle from "@/assets/partners/google.png";
 import logoAmazon from "@/assets/partners/amazon.png";
@@ -25,6 +32,16 @@ import logoMcKinsey from "@/assets/partners/mckinsey.png";
 import logoNationGraph from "@/assets/partners/nationgraph.png";
 import logoGarageCapital from "@/assets/partners/GarageCapital_logo.png";
 
+// Current sponsors (shown as cards on left side)
+const sponsors = [
+  { name: "FoodHero", logo: logoFoodHero },
+  { name: "BDO", logo: logoBDO },
+  { name: "Osler", logo: logoOsler },
+  { name: "Planned", logo: logoPlanned },
+  { name: "Triptyq", logo: logoTriptyq },
+];
+
+// Previous partners (shown in the 3D globe)
 const partners = [
   { name: "Anthropic", logo: logoAnthropic },
   { name: "Google", logo: logoGoogle },
@@ -247,26 +264,30 @@ const PartnersSection = () => {
               </div>
 
               <h3 className="font-display text-2xl md:text-3xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
-                Previously partnered with leading firms and organizations across
+                Currently partnered with leading firms and organizations across
                 Canada's innovation ecosystem
               </h3>
             </motion.div>
 
-            {/* Partner name pills */}
+            {/* Current Sponsor Logos */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15, duration: 0.6 }}
-              className="flex flex-wrap gap-2 mb-8"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8"
             >
-              {partners.map((p) => (
-                <span
-                  key={p.name}
-                  className="text-xs px-3 py-1.5 rounded-full border border-stroke text-muted-foreground"
+              {sponsors.map((s) => (
+                <div
+                  key={s.name}
+                  className="flex items-center justify-center p-6 rounded-lg border border-stroke bg-background/50 hover:border-stroke/80 transition-colors"
                 >
-                  {p.name}
-                </span>
+                  <img 
+                    src={s.logo} 
+                    alt={s.name} 
+                    className="max-w-full max-h-16 object-contain"
+                  />
+                </div>
               ))}
             </motion.div>
 
@@ -294,7 +315,7 @@ const PartnersSection = () => {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <p className="text-[11px] text-muted-foreground/45 text-center mb-3">
-              Drag to explore
+              Previous partners
             </p>
             <PartnerSphere />
           </motion.div>
