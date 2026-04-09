@@ -1,29 +1,13 @@
-import { useEffect, useRef, useState, Component, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Hls from "hls.js";
 import atlasLogo from "@/assets/atlas-logo.png";
-
-// Error boundary to catch Globe/Three.js crashes
-class SafeWrapper extends Component<{ children: ReactNode }, { hasError: boolean }> {
-  state = { hasError: false };
-  static getDerivedStateFromError() { return { hasError: true }; }
-  render() { return this.state.hasError ? null : this.props.children; }
-}
 
 const roles = ["Builders", "Founders", "Engineers", "Creators"];
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
-  const [GlobeBackground, setGlobeBackground] = useState<React.ComponentType | null>(null);
-
-  // Lazy load globe to prevent crash from blocking render
-  useEffect(() => {
-    import("./GlobeBackground")
-      .then((mod) => setGlobeBackground(() => mod.default))
-      .catch(() => {});
-  }, []);
-
   // HLS video setup
   useEffect(() => {
     const video = videoRef.current;
@@ -68,20 +52,6 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent" />
       </div>
-
-      {/* Globe overlay — wrapped in error boundary */}
-      {GlobeBackground && (
-        <SafeWrapper>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
-            transition={{ duration: 2, ease: "easeOut" }}
-            className="absolute inset-0 z-[1]"
-          >
-            <GlobeBackground />
-          </motion.div>
-        </SafeWrapper>
-      )}
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-[1400px] mx-auto w-full">
