@@ -8,6 +8,7 @@ import logoBDO from "@/assets/bdo.png";
 import logoOsler from "@/assets/olser.png";
 import logoPlanned from "@/assets/planned.png";
 import logoTriptyq from "@/assets/triptyq.png";
+import logoMondou from "@/assets/mondou.png";
 
 // Previous Partner Logo imports (for globe)
 import logoAnthropic from "@/assets/partners/anthropic.png";
@@ -39,6 +40,7 @@ const sponsors = [
   { name: "Osler", logo: logoOsler, url: "https://www.osler.com/en/" },
   { name: "Planned", logo: logoPlanned, url: "https://planned.com/" },
   { name: "Triptyq", logo: logoTriptyq, url: "https://triptyq.vc/" },
+  { name: "Mondou", logo: logoMondou, url: "https://www.mondou.com/en-CA/home" },
 ];
 
 // Previous partners (shown in the 3D globe)
@@ -264,7 +266,7 @@ const PartnersSection = () => {
               </div>
 
               <h3 className="font-display text-2xl md:text-3xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
-                Currently partnered with leading firms and organizations across
+                Currently partnered with leading firms and private donors across
                 Canada's innovation ecosystem
               </h3>
             </motion.div>
