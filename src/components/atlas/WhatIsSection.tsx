@@ -49,10 +49,9 @@ const events = [
     image: symposiumImg,
     stats: [
       { value: 100, suffix: "+", label: "VCs and Founders" },
-      { label: "Socratica Welcome Party" },
     ],
     year: "March 20th",
-    supporters: ["Empire Club, Garage Capital"],
+    supporters: ["Empire Club"],
     link: "https://luma.com/projectatlasmvc?e=evt-vPv6mMJSTqr9Y6G",
   },
   {
