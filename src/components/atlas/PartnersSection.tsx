@@ -34,11 +34,11 @@ import logoGarageCapital from "@/assets/partners/GarageCapital_logo.png";
 
 // Current sponsors (shown as cards on left side)
 const sponsors = [
-  { name: "FoodHero", logo: logoFoodHero },
-  { name: "BDO", logo: logoBDO },
-  { name: "Osler", logo: logoOsler },
-  { name: "Planned", logo: logoPlanned },
-  { name: "Triptyq", logo: logoTriptyq },
+  { name: "FoodHero", logo: logoFoodHero, url: "https://www.foodhero.com/" },
+  { name: "BDO", logo: logoBDO, url: "https://www.bdo.ca/" },
+  { name: "Osler", logo: logoOsler, url: "https://www.osler.com/en/" },
+  { name: "Planned", logo: logoPlanned, url: "https://planned.com/" },
+  { name: "Triptyq", logo: logoTriptyq, url: "https://triptyq.vc/" },
 ];
 
 // Previous partners (shown in the 3D globe)
@@ -278,16 +278,19 @@ const PartnersSection = () => {
               className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8"
             >
               {sponsors.map((s) => (
-                <div
+                <a
                   key={s.name}
-                  className="flex items-center justify-center p-6 rounded-lg border border-stroke bg-background/50 hover:border-stroke/80 transition-colors"
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center p-6 rounded-lg border border-stroke bg-white hover:border-stroke/80 transition-colors"
                 >
-                  <img 
-                    src={s.logo} 
-                    alt={s.name} 
+                  <img
+                    src={s.logo}
+                    alt={s.name}
                     className="max-w-full max-h-16 object-contain"
                   />
-                </div>
+                </a>
               ))}
             </motion.div>
 

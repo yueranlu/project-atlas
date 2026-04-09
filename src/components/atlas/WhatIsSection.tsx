@@ -16,7 +16,7 @@ const events = [
       { value: 21, label: "Speakers" },
       { value: 60, suffix: "+", label: "Startups" },
     ],
-    year: "2026",
+    year: "Jan 2026",
     supporters: ["McGill Ventures", "Tech Poutine", "La Entrepreneuriale d'HEC"],
     link: null,
   },
@@ -48,20 +48,19 @@ const events = [
     name: "Symposium Party",
     image: symposiumImg,
     stats: [
-      { value: 8, label: "PM Start" },
-      { value: 11, label: "PM End" },
-      { value: 1, label: "DJ" },
+      { value: 100, suffix: "+", label: "VCs and Founders" },
+      { label: "Socratica Welcome Party" },
     ],
-    year: "March 20",
-    supporters: ["Empire Club"],
+    year: "March 20th",
+    supporters: ["Empire Club, Garage Capital"],
     link: "https://luma.com/projectatlasmvc?e=evt-vPv6mMJSTqr9Y6G",
   },
   {
     name: "Sips & Soundscapes",
     image: sipsImg,
     stats: [
-      { value: 9, label: "AM Start" },
-      { value: 12, label: "PM End" },
+      { value: 50, label: "Founders" },
+      { value: 1000, label: "MG of Caffeine" },
       { value: 1, label: "DJ" },
     ],
     year: "March 28",
@@ -88,7 +87,7 @@ const WhatIsSection = () => {
       }
 
       animationRef.current = animate(x, -totalWidth, {
-        duration: 25, // Fast scroll - adjust this to control speed (lower = faster)
+        duration: 12, // Fast scroll - adjust this to control speed (lower = faster)
         repeat: Infinity,
         ease: "linear",
         onComplete: () => {
