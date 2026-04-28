@@ -42,6 +42,7 @@ const sponsors = [
   { name: "Planned", logo: logoPlanned, url: "https://planned.com/" },
   { name: "Triptyq", logo: logoTriptyq, url: "https://triptyq.vc/" },
   { name: "Mondou", logo: logoMondou, url: "https://www.mondou.com/en-CA/home" },
+  { name: "ORT", logo: logoORT, url: "https://www.ort.org/" },
 ];
 
 // Previous partners (shown in the 3D globe)
