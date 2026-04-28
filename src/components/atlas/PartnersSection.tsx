@@ -9,6 +9,7 @@ import logoOsler from "@/assets/olser.png";
 import logoPlanned from "@/assets/planned.png";
 import logoTriptyq from "@/assets/triptyq.png";
 import logoMondou from "@/assets/mondou.png";
+import logoORT from "@/assets/ort.png";
 
 // Previous Partner Logo imports (for globe)
 import logoAnthropic from "@/assets/partners/anthropic.png";
