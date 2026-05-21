@@ -10,6 +10,7 @@ import logoPlanned from "@/assets/planned.png";
 import logoTriptyq from "@/assets/triptyq.png";
 import logoMondou from "@/assets/mondou.png";
 import logoORT from "@/assets/ort.png";
+import logoGoodFuture from "@/assets/goodfuture.png";
 
 // Previous Partner Logo imports (for globe)
 import logoAnthropic from "@/assets/partners/anthropic.png";
@@ -43,6 +44,7 @@ const sponsors = [
   { name: "Triptyq", logo: logoTriptyq, url: "https://triptyq.vc/" },
   { name: "Mondou", logo: logoMondou, url: "https://www.mondou.com/en-CA/home" },
   { name: "ORT", logo: logoORT, url: "https://www.ort.org/" },
+  { name: "Good Future", logo: logoGoodFuture, url: "https://www.goodfuture.com/" },
 ];
 
 // Previous partners (shown in the 3D globe)
